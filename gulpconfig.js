@@ -9,10 +9,10 @@ var src               = './source',
     assets            = src + '/assets',
     scripts           = src + '/scripts',
     styles            = src + '/styles',
-    build             = './build',
+    build             = './docs',
     buildAssets       = build +  '/img',
     domain            = 'http://spende-einen-tab.de/'
-    version           = "0.5.0";
+    version           = "0.2.0";
 
 // all gulp task configurations & settings will be found here
 module.exports = {
