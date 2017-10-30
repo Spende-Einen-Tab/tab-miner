@@ -1,0 +1,22 @@
+<h2 class="cause">
+  {{ headline }}
+  <em class="cause-selection">
+    {{{headline_claim}}}
+    <ul class="cause-options">
+    {{#each pages }}
+      <li>
+        <a href="/{{path}}" class="{{{isActive @root.path path}}}">
+          …{{{ headline_claim }}}
+        </a>
+      </li>
+    {{/each}}
+    </ul>
+  </em>
+</h2>
+<div class="cause-charity">Diese Seite spendet an <a target="_blank" href="{{charity_link}}">{{charity}}</a></div>
+<div class="donation-display">
+  <div id="donation">
+    <em id="donation-value"></em>
+    <span class="blob"></span>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+{
+  "name": "tab",
+  "version": "0.0.1",
+  "description": "Donate CPU time to donate money to charities via client based Minero mining",
+  "main": "index.js",
+  "author": "Daniel Kurtius",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanseventures/casual-website.git"
+  },
+  "keywords": [
+    "node",
+    "gulp"
+  ],
+  "bugs": {
+    "url": "https://github.com/hanseventures/casual-website/issues"
+  },
+  "homepage": "https://github.com/hanseventures/casual-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "connect-gzip-static": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "handlebars": "^4.0.11",
+    "metalsmith": "^2.3.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-layouts": "^1.8.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-register-helpers": "^0.2.0",
+    "metalsmith-sitemap": "^1.2.0",
+    "pump": "^1.0.2",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {}
+}

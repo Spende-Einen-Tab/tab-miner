@@ -1,0 +1,74 @@
+
+// toggle button script from:
+// https://codepen.io/mallendeo/pen/eLIiG
+$tgl-width: 12em;
+$tgl-height: $tgl-width/2;
+
+.tgl {
+	display: none;
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + .btn-tgl {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+  + .btn-tgl {
+		outline: 0;
+		display: block;
+		width: $tgl-width;
+		height: $tgl-height;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+    background: $color-bg-lite;
+		border-radius: $tgl-height;
+		padding: 3px;
+		transition: all .4s ease;
+    @include respond-up-to('sm') {
+      margin-top: $spacer*2;
+      border-radius: $tgl-height*0.7;
+      width: $tgl-width*0.7;
+  		height: $tgl-height*0.7;
+    }
+		&:after {
+			border-radius: 50%;
+			background: #fff;
+			transition: all .2s ease;
+      left: 0;
+      content: attr(data-tgl-off);
+      text-align: center;
+      line-height: $tgl-height;
+      text-transform: uppercase;
+      font-weight: bold;
+      @include respond-up-to('sm') {
+        line-height: $tgl-height*0.69;
+      }
+		}
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			// content: "";
+			width: 50%;
+			height: 100%;
+		}
+		&:before {
+			left: 0;
+			display: none;
+		}
+	}
+	&:checked + .btn-tgl:after {
+		left: 50%;
+    content: attr(data-tgl-on);
+	}
+  &:checked + .btn-tgl {
+		background: $color-mint;
+	}
+}

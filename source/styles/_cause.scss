@@ -1,0 +1,98 @@
+
+.cause {
+  color: black;
+  cursor: default;
+  position: relative;
+  font-size: 3.5em;
+  margin: 0.5em 0 0.75em;
+  @include respond-up-to('sm') {
+    font-size: 2em;
+  }
+  em {
+    font-style: normal;
+    color: $color-mint;
+    border-bottom: 4px dotted lighten($color-mint,10%);
+    cursor: pointer;
+    &:after {
+      // content: "▶";
+      font-size: 0.7em;
+    }
+    @include respond-up-to('lg') {
+      border-width: 3px;
+    }
+  }
+}
+
+.cause-selection {
+
+  &:hover {
+    color: lighten($color-mint, 20%);
+    > ul {
+      animation: show .1s;
+      display: block;
+    }
+  }
+}
+
+.cause-options {
+  position: absolute;
+  display: none;
+  list-style-type: none;
+  font-size: .5em;
+  color: $color-type;
+  width: auto;
+  bottom: 0;
+  // top: 4em;
+  left: 0;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 2px 5px 10px $color-type-lite;
+  -webkit-backdrop-filter: blur(5px);
+  margin: 0;
+  padding: .75em;
+
+  .active {
+    display: none;
+  }
+  a {
+    word-break: keep-all;
+    color: $color-mint;
+    text-decoration: none;
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+}
+
+.cause-charity {
+  a {
+    &:after {
+      // content: "▶"
+    }
+  }
+}
+
+.donation-display {
+  margin: 0.25em 0 1em;
+  min-height: 2em;
+}
+#donation {
+  .blob {
+    display: inline-block;
+    margin: 2px 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    animation: bg-color-pulse 1s infinite;
+  }
+}
+#donation-value {
+  // animation: color-pulse 1.5s infinite;
+  color: $color-mint;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: normal;
+  &:before {
+    content: "€"
+  }
+  @include respond-up-to('sm') { font-size: 1.75em; }
+}
