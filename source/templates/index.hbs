@@ -4,12 +4,10 @@
     {{> meta }}
 
     <link href="/css/app.css?v={{version}}" crossorigin="anonymous" media="all" rel="stylesheet" />
-    <script>User='{{coinhive_user}}';EUR={{inital_EUR}};</script>
+    <script type="text/javascript">User='{{coinhive_user}}';EUR={{inital_EUR}};</script>
   </head>
   <body>
-    <main>
-
-      <section class="form">
+    <header>
         <div>
           <input id="tgl-mining" class="tgl" type="checkbox">
           <label for="tgl-mining" class="btn-tgl" data-tgl-on="On" data-tgl-off="Off"></label>
@@ -17,133 +15,130 @@
 
           {{> cause }}
 
+    </header>
+    <main>
+      <article>
 
 
-      </section>
-      <section class="content">
-        <article>
+      {{{contents}}}
 
 
-        {{{contents}}}
-
-
-        <h2 class="lead">Worum geht es hier?</h2>
-        <p>
-          …
-        </p>
-
-        <h3>Wie kannst Du helfen?</h3>
-        <p>
-          Du kannst drei sehr einfache Dinge tun um erfolgreich zu spenden:
-            <a class="btn" id="start-mining" href="#">aktiviere das Mining</a>
-              oder
-            <a class="btn" href="#disqus">beteilige dich an der Diskussion</a>
-          …
-        </p>
-
-        <h1>Spende einen Tab in deinem Browser für einen guten Zweck!</h1>
-        <p>
-          Wenn Du diesen Tab offen und den Knopf links oben auf <strong>"ON"</strong> läßt,
-          …
-        </p>
-        <h3>Wie wird Geld generiert?</h3>
-        <p>
-          Diese Seite erzeugt <a href="https://de.wikipedia.org/wiki/Monero">Monero</a>
-          …
-        </p>
-
-        <h3>Wieviel Geld steuerst Du bei?</h3>
-        <p>
-           Du berechnest aktuell mit einer Geschwindigeit von <strong id="speedOut">0</strong> Hashes pro Sekunde.
-           In diesem Tab sind das insgesamt <strong id="hashesOut">0</strong> Hashes.
-           Das sind ca. €<strong id="euroOut">0</strong>.
-        </p>
-
-        <h3>Wieviel Geld kann man so erzeugen?</h3>
-        <p>
-          …
-        </p>
-
-        <h3>Wofür kannst Du auf dieser Seite spenden?</h3>
-        <p>
-          …
-        </p>
-        <nav>
-          <ul>
-          {{#each pages }}
-            <li>
-              <a href="/{{path}}" class="btn {{{isActive @root.path path}}}">{{ headline }}
-                {{{ headline_claim }}}
-              </a>
-            </li>
-          {{/each}}
-          </ul>
-        </nav>
-
-
-
-
-
-        <h3>Wie funktioniert das Spenden?</h3>
-        <p>…</p>
-
-
-        <h3>Dieses Projekt ist auf Deine Mithilfe angewiesen.</h3>
-        <p>
-          Jede Form von Hinweis, Vorschlag oder Angebot kann nur helfen und ist ausdrücklich willkommmen.
-        </p>
-      </article>
-
-
-      <div id="disqus">
-
-        <div id="disqus_thread"></div>
-        <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://spende.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </div>
-
-      <hr>
-
-      <h3>Nachsatz bzw. Kolophon</h3>
+      <h2 class="lead">Worum geht es hier?</h2>
       <p>
-        Der Betrieb von <strong>{{site.name}}</strong> steht in keinerlei geschäftlicher Verbindung zu den Spendenorganisationen oder anderen Unternehmen.
-        Der Source-Code liegt schlecht dokumentiert aber frei zugänglich auf <a href="https://github.com/Spende-Einen-Tab/spende-einen-tab.github.io" target="_blank">GitHub</a>.
-        Zur Auswertung aller Besucher und deren Verhalten nutzt diese Seite Software von <a href="https://www.google.com/intl/de/analytics/" target="_blank">Google Analytics</a>
-        und für moderierte Kommentare <a href="https://disqus.com/" target="_blank">Disqus</a>.
-      </p>
-      <p>
-        Das Projekt basiert auf einer Idee von <a href="https://bod.ge" rel="noopener noreferrer" target="_blank">Mike Bodge</a>,
-        ist aber vollständig eigenständig und ist unabhängig entwickelt worden.
-      </p>
-      <p><strong>{{site.name}}</strong> wurde von <a href="#">Daniel Kurtius</a> außschließlich zum Wohle der Allgemeinheit erstellt und wird auch zu keinem anderen Zweck betrieben.
-      </p>
-      <p>
-        Vielen Dank für Deine Aufmerksamkeit.
+        …
       </p>
 
+      <h3>Wie kannst Du helfen?</h3>
+      <p>
+        Du kannst drei sehr einfache Dinge tun um erfolgreich zu spenden:
+          <a class="btn" id="start-mining" href="#">aktiviere das Mining</a>
+            oder
+          <a class="btn" href="#disqus">beteilige dich an der Diskussion</a>
+        …
+      </p>
 
-      </section>
+      <h1>Spende einen Tab in deinem Browser für einen guten Zweck!</h1>
+      <p>
+        Wenn Du diesen Tab offen und den Knopf links oben auf <strong>"ON"</strong> läßt,
+        …
+      </p>
+      <h3>Wie wird Geld generiert?</h3>
+      <p>
+        Diese Seite erzeugt <a href="https://de.wikipedia.org/wiki/Monero" rel="noopener">Monero</a>
+        …
+      </p>
+
+      <h3>Wieviel Geld steuerst Du bei?</h3>
+      <p>
+         Du berechnest aktuell mit einer Geschwindigeit von <strong id="speedOut">0</strong> Hashes pro Sekunde.
+         In diesem Tab sind das insgesamt <strong id="hashesOut">0</strong> Hashes.
+         Das sind ca. €<strong id="euroOut">0</strong>.
+      </p>
+
+      <h3>Wieviel Geld kann man so erzeugen?</h3>
+      <p>
+        …
+      </p>
+
+      <h3>Wofür kannst Du auf dieser Seite spenden?</h3>
+      <p>
+        …
+      </p>
+      <nav>
+        <ul>
+        {{#each pages }}
+          <li>
+            <a href="/{{path}}" class="btn {{{isActive @root.path path}}}">{{ headline }}
+              {{{ headline_claim }}}
+            </a>
+          </li>
+        {{/each}}
+        </ul>
+      </nav>
+
+
+
+
+
+      <h3>Wie funktioniert das Spenden?</h3>
+      <p>…</p>
+
+
+      <h3>Dieses Projekt ist auf Deine Mithilfe angewiesen.</h3>
+      <p>
+        Jede Form von Hinweis, Vorschlag oder Angebot kann nur helfen und ist ausdrücklich willkommmen.
+      </p>
+    </article>
+
+
+    <div id="disqus">
+
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://spende.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <hr>
+
+    <h3>Nachsatz bzw. Kolophon</h3>
+    <p>
+      Der Betrieb von <strong>{{site.name}}</strong> steht in keinerlei geschäftlicher Verbindung zu den Spendenorganisationen oder anderen Unternehmen.
+      Der Source-Code liegt schlecht dokumentiert aber frei zugänglich auf <a href="https://github.com/Spende-Einen-Tab/spende-einen-tab.github.io" target="_blank" rel="noopener">GitHub</a>.
+      Zur Auswertung aller Besucher und deren Verhalten nutzt diese Seite Software von <a href="https://www.google.com/intl/de/analytics/" target="_blank" rel="noopener">Google Analytics</a>
+      und für moderierte Kommentare <a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a>.
+    </p>
+    <p>
+      Das Projekt basiert auf einer Idee von <a href="https://bod.ge" rel="noopener" target="_blank">Mike Bodge</a>,
+      ist aber vollständig eigenständig und ist unabhängig entwickelt worden.
+    </p>
+    <p><strong>{{site.name}}</strong> wurde von <a href="#" rel="noopener">Daniel Kurtius</a> außschließlich zum Wohle der Allgemeinheit erstellt und wird auch zu keinem anderen Zweck betrieben.
+    </p>
+    <p>
+      Vielen Dank für Deine Aufmerksamkeit.
+    </p>
+
+
     </main>
 
-    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
-    <script src="/js/app.js?v={{version}}"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analyticsID }}"></script>
+    <script type="text/javascript" src="https://coinhive.com/lib/coinhive.min.js"></script>
+    <script type="text/javascript" src="/js/app.js?v={{version}}"></script>
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id={{ site.analyticsID }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

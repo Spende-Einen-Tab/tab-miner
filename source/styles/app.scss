@@ -22,8 +22,10 @@ $spacer: 2vw;
 @import "toggle-button";
 @import "cause";
 
-
 body {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 $spacer*3;
   border-left: 10px solid $color-bg-lite;
   font-family: $font-default;
   font-size: 17px;
@@ -32,12 +34,36 @@ body {
   &.active {
     border-left: 10px solid $color-mint;
   }
+  @include respond-up-to('md') {
+    display: block;
+  }
   @include respond-up-to('sm') {
     font-size: 20px;
     line-height: 1.3em;
     border-left: 4px solid $color-mint;
   }
 }
+header {
+  padding: $spacer*2 $spacer*2 0 0;
+  flex: 1 33%;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  @include respond-up-to('md') {
+    position: static;
+  }
+}
+main {
+  padding: $spacer*2 0 $spacer*3 $spacer;
+  flex: 3 66%;
+  article {
+    max-width: 768px;
+  }
+}
+
+
+
 
 hr {
   margin: 5em 0 1.5em;
@@ -109,36 +135,7 @@ nav {
   }
 }
 
-// flex setup
-main {
-  display: flex;
-  padding: 0 $spacer*3;
-  justify-content: flex-start;
-  @include respond-up-to('md') {
-    display: block;
-  }
-}
 
-.content {
-  padding: $spacer*2 0 $spacer*3 $spacer;
-  flex: 3 66%;
-  article {
-    max-width: 768px;
-  }
-}
-
-.form {
-  padding-top: $spacer*2;
-  flex: 1 33%;
-  align-self: flex-start;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding-right: $spacer*2;
-  @include respond-up-to('md') {
-    position: static;
-  }
-}
 
 
 #disqus {
