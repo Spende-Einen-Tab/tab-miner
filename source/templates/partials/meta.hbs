@@ -13,7 +13,7 @@
 <title>{{ meta-title }}</title>
 <!--  document title less than 55 characters:
       https://github.com/thedaviddias/Front-End-Checklist -->
-<meta name="description" content="{{ site.meta-description }}">
+<meta name="description" content="{{ meta-description }}">
 <!--  Description of the page less than 150 characters
       https://github.com/thedaviddias/Front-End-Checklist -->
 
@@ -48,14 +48,24 @@
 <!--  facebook Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}{{path}}">
-<meta property="og:title" content="{{ site.meta-title }}">
-<meta property="og:image" content="{{ site.url }}og-image.jpg">
-<meta property="og:description" content="{{ site.meta-description }}">
+<meta property="og:title" content="{{ meta-title }}">
+<meta property="og:description" content="{{ meta-description }}">
 <meta property="og:site_name" content="{{ site.name }}">
 <meta property="og:locale" content="{{ site.lang }}">
-<meta property="og:image" content="{{ site.url }}og-image.jpg">
+<meta property="og:image" content="{{ site.url }}og-image.png">
 <!--  Next tags are optional but recommended -->
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <!--  some facebook related stuff. image see: assets/icons.sketch
+      https://github.com/thedaviddias/Front-End-Checklist -->
+
+<!--  twitter card -->
+<meta name="twitter:card" content="{{ meta-description }}">
+<meta name="twitter:title" content="{{ meta-title }}">
+<!-- <meta name="twitter:site" content="@site_account">
+<meta name="twitter:creator" content="@individual_account"> -->
+<meta name="twitter:url" content="{{ site.url }}{{path}}">
+<meta name="twitter:description" content="{{ meta-description }}">
+<meta name="twitter:image" content="{{ site.url }}apple-touch-icon.png">
+<!--  twitter. image see: assets/icons.sketch
       https://github.com/thedaviddias/Front-End-Checklist -->
