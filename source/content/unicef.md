@@ -1,6 +1,6 @@
 ---
 # metadata
-meta-title: Spende einen Tab! —
+meta-title: Spende einen Tab für Kinder in Syrien!
 # meta-title should be around 50 chars. -> https://moz.com/learn/seo/title-tag
 meta-description: .
 # meta-description should be around 150 chars. -> https://moz.com/learn/seo/meta-description

@@ -2,8 +2,6 @@
 <html lang="{{ site.lang }}">
   <head>
     {{> meta }}
-    <title>{{ meta-title }} auf {{ site.name }}</title>
-    <meta name="description" content="{{ site.meta-description }}">
 
     <link href="/css/app.css?v={{version}}" crossorigin="anonymous" media="all" rel="stylesheet" />
     <script>User='{{coinhive_user}}';EUR={{inital_EUR}};</script>
@@ -54,17 +52,18 @@
           …
         </p>
 
-        <h3>Wieviel Geld kann man so erzeugen?</h3>
-        <p>
-          …
-        </p>
-
         <h3>Wieviel Geld steuerst Du bei?</h3>
         <p>
            Du berechnest aktuell mit einer Geschwindigeit von <strong id="speedOut">0</strong> Hashes pro Sekunde.
            In diesem Tab sind das insgesamt <strong id="hashesOut">0</strong> Hashes.
            Das sind ca. €<strong id="euroOut">0</strong>.
         </p>
+
+        <h3>Wieviel Geld kann man so erzeugen?</h3>
+        <p>
+          …
+        </p>
+
         <h3>Wofür kannst Du auf dieser Seite spenden?</h3>
         <p>
           …
@@ -124,7 +123,11 @@
       <h3>Nachsatz bzw. Kolophon</h3>
       <p>
         Der Betrieb von <strong>{{site.name}}</strong> steht in keinerlei geschäftlicher Verbindung zu den Spendenorganisationen oder anderen Unternehmen.
-        Der Source-Code liegt schlecht dokumentiert aber frei zugänglich auf <a href="">GitHub</a>.
+        Der Source-Code liegt schlecht dokumentiert aber frei zugänglich auf <a href="https://github.com/Spende-Einen-Tab/spende-einen-tab.github.io" target="_blank">GitHub</a>.
+        Zur Auswertung aller Besucher und deren Verhalten nutzt diese Seite Software von <a href="https://www.google.com/intl/de/analytics/" target="_blank">Google Analytics</a>
+        und für moderierte Kommentare <a href="https://disqus.com/" target="_blank">Disqus</a>.
+      </p>
+      <p>
         Das Projekt basiert auf einer Idee von <a href="https://bod.ge" rel="noopener noreferrer" target="_blank">Mike Bodge</a>,
         ist aber vollständig eigenständig und ist unabhängig entwickelt worden.
       </p>
@@ -140,14 +143,13 @@
 
     <script src="https://coinhive.com/lib/coinhive.min.js"></script>
     <script src="/js/app.js?v={{version}}"></script>
-    <!--  Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analyticsID }}"></script>
     <script>
-        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','{{ site.analyticsID }}','auto');ga('set', 'anonymizeIp',true);ga('send','pageview')
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.analyticsID }}');
+      gtag('set', 'anonymizeIp',true);
     </script>
-    <script src="//www.google-analytics.com/analytics.js" async defer></script>
-    <!--  smallest & quickest solution + anonymization for german law
-          https://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics
-          https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md#anonymize-ip-addresses -->
   </body>
 </html>

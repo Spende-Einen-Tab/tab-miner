@@ -9,13 +9,21 @@
 <!--  check viewport shit here:
       https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
 
-<!--  SEO Specials -->
-<link rel="canonical" href="{{ site.meta-canonical }}">
-<!--  SEO relevant canonical link
-      https://moz.com/learn/seo/canonicalization -->
-<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-<!--  SEO relavant sitemap
-      http://www.sitemaps.org/protocol.html -->
+<!-- <title>{{ meta-title }} auf {{ site.name }}</title> -->
+<title>{{ meta-title }}</title>
+<!--  document title less than 55 characters:
+      https://github.com/thedaviddias/Front-End-Checklist -->
+<meta name="description" content="{{ site.meta-description }}">
+<!--  Description of the page less than 150 characters
+      https://github.com/thedaviddias/Front-End-Checklist -->
+
+<!-- ICONS -->
+<link rel="icon" type="image/x-icon" href="{{ site.url }}favicon.ico">
+<!--  Standard favicon
+      https://github.com/thedaviddias/Front-End-Checklist -->
+<link rel="icon" type="image/png" href="{{ site.url }}favicon.png">
+<!--  Recommended favicon format
+      https://github.com/thedaviddias/Front-End-Checklist -->
 
 <!--  Apple Specials -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -24,7 +32,30 @@
 
 <!--  Windows Specials -->
 <meta name="application-name" content="{{ site.name }}">
-<meta name="msapplication-TileImage" content="/metro-tile.png">
+<meta name="msapplication-TileImage" content="{{ site.url }}metro-tile.png">
 <!--  some windows related stuff. image see: assets/icons.sketch
       https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md#ie-pinned-sites-ie9
       https://blogs.msdn.microsoft.com/ie/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8/ -->
+
+<!--  SEO Specials -->
+<link rel="canonical" href="{{ site.meta-canonical }}">
+<!--  SEO relevant canonical link
+      https://moz.com/learn/seo/canonicalization -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}sitemap.xml">
+<!--  SEO relavant sitemap
+      http://www.sitemaps.org/protocol.html -->
+
+<!--  facebook Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{path}}">
+<meta property="og:title" content="{{ site.meta-title }}">
+<meta property="og:image" content="{{ site.url }}og-image.jpg">
+<meta property="og:description" content="{{ site.meta-description }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="{{ site.lang }}">
+<meta property="og:image" content="{{ site.url }}og-image.jpg">
+<!--  Next tags are optional but recommended -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!--  some facebook related stuff. image see: assets/icons.sketch
+      https://github.com/thedaviddias/Front-End-Checklist -->
