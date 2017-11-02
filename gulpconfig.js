@@ -12,7 +12,7 @@ var src               = './source',
     // build            = src + '/build',
     build             = '../spende-einen-tab.github.io', // build repo outside of this project…
     buildAssets       = build +  '/img',
-    domain            = 'https://spende-einen-tab.de/'
+    domain            = 'http://spende-einen-tab.de/'
     version           = "0.3.0";
 
 // all gulp task configurations & settings will be found here
@@ -42,6 +42,7 @@ module.exports = {
         url: domain,
         name: "Spende-Einen-Tab.de",
         lang: "de",
+        locale: "de_DE",
         analyticsID: "UA-108923431-1",
         "meta-canonical": domain,
         "meta-description": "The description meta tag provides a short description of the page. In some situations this description is used as a part of the snippet shown in the search results."
@@ -61,14 +62,6 @@ module.exports = {
         pages: {
           sortBy: "rank",
           reverse: false,
-        },
-        singles: {
-          sortBy: "score",
-          reverse: true
-        },
-        casuals: {
-          sortBy: "score",
-          reverse: true
         }
       },
       "metalsmith-markdown": {                    // https://github.com/segmentio/metalsmith-markdown"
