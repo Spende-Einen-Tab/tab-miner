@@ -10,13 +10,13 @@ function ready(fn) {
 
 ready(function(){
   // UI elements
-  var donation    = document.getElementById('donation'),
-      donationOut = document.getElementById('donation-value'),
-      speedOut    = document.getElementById('speedOut'),
-      hashesOut   = document.getElementById('hashesOut'),
-      euroOut     = document.getElementById('euroOut'),
-      tgl         = document.getElementById('tgl-mining');
-      start       = document.getElementById('start-mining');
+  var donation    = document.getElementById('js-donation'),
+      donationOut = document.getElementById('js-donation-value'),
+      speedOut    = document.getElementById('js-speedOut'),
+      hashesOut   = document.getElementById('js-hashesOut'),
+      euroOut     = document.getElementById('js-euroOut'),
+      tgl         = document.getElementById('js-tgl-mining');
+      start       = document.getElementById('js-start-mining');
 
   // miner setup
   miner = new CoinHive.User('', User, {
@@ -29,7 +29,7 @@ ready(function(){
       acceptedHashes = 0;
 
 
-  // setup service
+  // service setup
   // tgl.checked = true;
   toggleMining();
   updateUI();

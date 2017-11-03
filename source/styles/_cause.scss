@@ -74,9 +74,7 @@
 .donation-display {
   margin: 0.25em 0 1em;
   min-height: 2em;
-}
-#donation {
-  .blob {
+  span {
     display: inline-block;
     margin: 2px 10px;
     width: 1em;
@@ -84,15 +82,15 @@
     border-radius: 100%;
     animation: bg-color-pulse 1s infinite;
   }
-}
-#donation-value {
-  // animation: color-pulse 1.5s infinite;
-  color: $color-mint;
-  font-size: 2em;
-  font-weight: bold;
-  font-style: normal;
-  &:before {
-    content: "€"
+  em {
+    // animation: color-pulse 1.5s infinite;
+    color: $color-mint;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: normal;
+    &:before {
+      content: "€"
+    }
+    @include respond-up-to('sm') { font-size: 1.75em; }
   }
-  @include respond-up-to('sm') { font-size: 1.75em; }
 }

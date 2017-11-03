@@ -32,7 +32,7 @@ body {
   background: $color-bg;
   color: $color-type;
   &.active {
-    border-left: 10px solid $color-mint;
+    border-left-color: $color-mint;
   }
   @include respond-up-to('md') {
     display: block;
@@ -40,7 +40,7 @@ body {
   @include respond-up-to('sm') {
     font-size: 20px;
     line-height: 1.3em;
-    border-left: 4px solid $color-mint;
+    border-left-width: 6px;
   }
 }
 header {
