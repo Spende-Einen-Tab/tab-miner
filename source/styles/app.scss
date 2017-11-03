@@ -28,7 +28,8 @@ body {
   padding: 0 $spacer*3;
   border-left: 10px solid $color-bg-lite;
   font-family: $font-default;
-  font-size: 17px;
+  font-size: 16px;
+  line-height: 1.5em;
   background: $color-bg;
   color: $color-type;
   &.active {
@@ -57,44 +58,11 @@ header {
 main {
   padding: $spacer*2 0 $spacer*3 $spacer;
   flex: 3 66%;
-  article {
-    max-width: 768px;
+  @include respond-up-to('md') {
+    padding-left: 0;
   }
 }
 
-
-
-
-hr {
-  margin: 5em 0 1.5em;
-  border: 2px solid $color-bg-lite;
-}
-
-
-
-h2 {
-  font-size: 1.75em;
-  margin: 1.5em 0 0;
-  @include respond-up-to('sm') { font-size: 1.5em; }
-}
-.lead {
-  margin-top: 0;
-}
-
-p { margin: 0 0 1em; }
-
-h1,
-h3,
-h4 {
-  font-size: 1.2em;
-  margin: 3em 0 0.25em;
-}
-a {
-  color: darken($color-mint,5%);
-}
-strong {
-  font-size: 1em;
-}
 
 nav {
   ul {
@@ -106,6 +74,43 @@ nav {
       margin-bottom: 0.25em;
     }
   }
+}
+
+article {
+  max-width: 640px;
+  > h2 {
+    margin-top: 0;
+  }
+}
+
+
+
+h2 {
+  font-size: 2em;
+  margin: 1.5em 0 .25em;
+  @include respond-up-to('sm') {
+    font-size: 1.5em;
+  }
+}
+h1,
+h3,
+h4 {
+  font-size: 1.2em;
+  margin: 3em 0 0.25em;
+}
+
+hr {
+  margin: 5em 0 1.5em;
+  border: 2px solid $color-bg-lite;
+}
+p {
+  margin: 0 0 1em;
+}
+a {
+  color: darken($color-mint,5%);
+}
+strong {
+  font-size: 1em;
 }
 
 
