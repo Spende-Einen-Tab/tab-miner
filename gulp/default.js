@@ -21,6 +21,7 @@ gulp.task('build', function(callback) {
       'images'
     ],
     'minifyHTML',
+    'purifyCSS',
     'minifyCSS',
     'minifyJS',
     // 'minifyImages',

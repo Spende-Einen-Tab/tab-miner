@@ -29,6 +29,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.4.0",
     "gulp-htmlmin": "^2.0.0",
+    "gulp-purifycss": "^0.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^3.0.0",

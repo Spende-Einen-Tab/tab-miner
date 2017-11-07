@@ -126,6 +126,15 @@ module.exports = {
       keepSpecialComments: '*' // '*',1,0
     }
   },
+  purifyCSS: {                                    // https://github.com/purifycss/gulp-purifycss
+    src:  build + "/css/**/*.css",
+    dest: build + "/css",
+    js:   build + "/**/*.js",
+    html: build + "/**/*.html",
+    options: {
+      // rejected: true
+    }
+  },
   minifyJS: {                                     // https://www.npmjs.com/package/gulp-uglify
     src: src + "/scripts/**/*.js",
     dest: build + "/js",
