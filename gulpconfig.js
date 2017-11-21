@@ -80,7 +80,7 @@ module.exports = {
         engine: "handlebars",
         directory: templates,
         partials: templates + "/partials",
-        default: "index.hbs",
+        default: "miner.hbs",
         rename: true
       },
       "metalsmith-sitemap": {                     // https://github.com/ExtraHop/metalsmith-sitemap

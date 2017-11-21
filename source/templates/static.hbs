@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    {{> meta }}
+
+    <link href="/css/app.css?v={{version}}" crossorigin="anonymous" media="all" rel="stylesheet" />
+  </head>
+  <body class="static">
+
+    <main>
+      <h1>Impressum</h1>
+      <br>
+      <p>
+        Daniel Kurtius
+        <br>Lobuschstraße 2–4
+        <br>22765 Hamburg
+      </p>
+      <p>
+        Telefon: 0160/4217000
+        <br>E-Mail: <a href="mailto:hey@spende-einen-tab.de">hey@spende-einen-tab.de</a>
+      </p>
+      <p>
+        <br><br>Hier geht's zurück zu <a href="/">{{site.name}}</a>.
+        <br>Vielen Dank für Deinen Besuch.
+        👋
+
+      </p>
+
+      {{> footer }}
+
+    </main>
+
+
+    <script type="application/javascript" async src="https://www.googletagmanager.com/gtag/js?id={{ site.analyticsID }}"></script>
+    <script type="application/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.analyticsID }}');
+      gtag('set', 'anonymizeIp',true);
+    </script>
+  </body>
+</html>
