@@ -18,93 +18,75 @@
     </header>
     <main>
       <article>
+      <h2>Worum geht es hier?</h2>
+      <p>Auf <strong>Spende-Einen-Tab.de</strong> kannst Du die Zeit, in der diese Seite offen ist, in eine Spende verwandeln.</p>
+
+      <h1>Spende einen Tab deines Browsers für einen guten Zweck!</h1>
+      <p>Wenn Du diesen Tab offen und den Schalter links oben auf <strong>&quot;ON&quot;</strong> läßt, spendest du echtes Geld.
+        Je länger der Browser-Tab offen bleibt, um so mehr Geld kann es werden.
+
+      </p>
+
+      <h3>Wofür kannst Du auf dieser Seite spenden?</h3>
+      <p>Es gibt aktuell drei Themen für die gespendet werden kann:</p>
+      <nav>
+          <ul>
+          {{#each pages }}
+            <li>
+              <a href="/{{path}}" class="btn {{{isActive @root.path path}}}">{{ headline }}
+                {{{ headline_claim }}}
+              </a>
+            </li>
+          {{/each}}
+          </ul>
+        </nav>
+
+      <h3>Wie kannst Du helfen?</h3>
+      <p>
+        Du kannst zwei weitere, einfache, Dinge beitragen um dieses Projekt erfolgreich zu machen:
+        Die erste Möglichkeit ist es <a href="#disqus">sich an der Diskussion zu beteiligen</a> um das Projekt besser zu machen.
+        — Die Zweite: zeige allen Deinen Freunden und Kollegen diese Seite damit so viele wie möglich
+        einen Browser-Tab spenden. Vielleicht kennst Du auch Menschen für die dieses Projekt frischer oder
+        relevanter Inhalt für deren Projekte darstellt (wie für Presse, NGOs, Agenturen, Blogs oder Andere).
+        Wenn Du Ideen hast, schick bitte eine E-Mail an
+        <a href="mailto:hey@spende-einen-tab.de">hey@spende-einen-tab.de</a>.
+        <em><strong>Je mehr Sichtbarkeit Du ermöglichen kannst um so mehr Spenden werden entstehen.</strong></em></p>
+
+      <h3>Wie wird das Geld „hergestellt“?</h3>
+      <p>
+        Diese Seite errechnet die digitale Währung <a href="https://de.wikipedia.org/wiki/Monero">Monero</a>,
+        eine sogenannte Cryptocurrency (wie z.B.: Bitcoin). Mit Hilfe des Dienstleisters <a href="https://coinhive.com">Coinhive</a>
+        werden Bruchteile eines Moneros erstellt. Die Berechnungen vieler Bruchteile („Hashes“) dieser Währung
+        lassen sich in Euro umtauschen. Das klingt kompliziert, ist es auch.
+      </p>
+
+      <h3>Wieviel Geld steuerst Du bei?</h3>
+      <p>Du berechnest aktuell mit einer Geschwindigkeit von <strong><span id="js-speedOut">0</span>
+         Hashes pro Sekunde.</strong> In diesem Tab sind das insgesamt <strong><span id="js-hashesOut">0</span> Hashes</strong>.
+         Das sind ca. <strong>€<span id="js-euroOut">0</span></strong>.</p>
+
+      <h3> Wieviel Geld kann man so erzeugen?</h3>
+
+      <p>Nur wenn viele Menschen über einen längeren Zeitraum spenden kommt eine größere Summe zusammen. Wenn Du den Browser-Tab den ganzen Tag offen läßt, spendest Du vielleicht <strong>fünf Cent</strong>. Schon bei 1.000 Spendern und einer Woche sind es <strong>€350</strong>, bei der Einfachheit der Aufgabe und der Größe des Internets sollte eigentlich deutlich mehr möglich sein, oder?</p>
+
+      <h3>Wie funktioniert das Spenden?</h3>
+
+      <p>Jedes Mal wenn einem einzelnen Thema Moneros im wert von Hundert Euro zugeschrieben werden können</p>
 
 
       {{{contents}}}
 
 
-      <h2 class="lead">Worum geht es hier?</h2>
-      <p>
-        …
-      </p>
-
-      <h3>Wie kannst Du helfen?</h3>
-      <p>
-        Du kannst drei sehr einfache Dinge tun um erfolgreich zu spenden:
-          <a class="btn" id="js-start-mining" href="#">aktiviere das Mining</a>
-            oder
-          <a class="btn" href="#disqus">beteilige dich an der Diskussion</a>
-        …
-      </p>
-
-      <h1>Spende einen Tab in deinem Browser für einen guten Zweck!</h1>
-      <p>
-        Wenn Du diesen Tab offen und den Knopf links oben auf <strong>"ON"</strong> läßt,
-        …
-      </p>
-      <h3>Wie wird Geld generiert?</h3>
-      <p>
-        Diese Seite erzeugt <a href="https://de.wikipedia.org/wiki/Monero" rel="noopener noreferrer">Monero</a>
-        …
-      </p>
-
-      <h3>Wieviel Geld steuerst Du bei?</h3>
-      <p>
-         Du berechnest aktuell mit einer Geschwindigeit von <strong id="js-speedOut">0</strong> Hashes pro Sekunde.
-         In diesem Tab sind das insgesamt <strong id="js-hashesOut">0</strong> Hashes.
-         Das sind ca. <strong>€<span id="js-euroOut">0</span></strong>.
-      </p>
-
-      <h3>Wieviel Geld kann man so erzeugen?</h3>
-      <p>
-        …
-      </p>
-
-      <h3>Wofür kannst Du auf dieser Seite spenden?</h3>
-      <p>
-        …
-      </p>
-      <nav>
-        <ul>
-        {{#each pages }}
-          <li>
-            <a href="/{{path}}" class="btn {{{isActive @root.path path}}}">{{ headline }}
-              {{{ headline_claim }}}
-            </a>
-          </li>
-        {{/each}}
-        </ul>
-      </nav>
-
-
-
-
-
-      <h3>Wie funktioniert das Spenden?</h3>
-      <p>…</p>
-
+    <div id="disqus">
 
       <h3>Dieses Projekt ist auf Deine Mithilfe angewiesen.</h3>
       <p>
-        Jede Form von Hinweis, Vorschlag oder Angebot kann nur helfen und ist ausdrücklich willkommmen.
+        Jede Form von Hinweis, Vorschlag oder Angebot kann nur helfen und ist ausdrücklich willkommen.
       </p>
-    </article>
-
-
-    <div id="disqus">
 
       <div id="disqus_thread"></div>
       <script type="application/javascript">
-      /**
-      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-      /*
-      var disqus_config = function () {
-      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      */
-      (function() { // DON'T EDIT BELOW THIS LINE
+      (function() {
       var d = document, s = d.createElement('script');
       s.src = 'https://spende.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
@@ -116,25 +98,29 @@
 
     <hr>
 
-    <h3>Nachsatz bzw. Kolophon</h3>
+    <h3>Nachsatz</h3>
     <p>
       Der Betrieb von <strong>{{site.name}}</strong> steht in keinerlei geschäftlicher Verbindung zu den Spendenorganisationen oder anderen Unternehmen.
       Der Source-Code liegt schlecht dokumentiert aber frei zugänglich auf <a href="https://github.com/Spende-Einen-Tab/spende-einen-tab.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>.
       Zur Auswertung aller Besucher und deren Verhalten nutzt diese Seite Software von <a href="https://www.google.com/intl/de/analytics/" target="_blank" rel="noopener noreferrer">Google Analytics</a>
       und für moderierte Kommentare <a href="https://disqus.com/" target="_blank" rel="noopener noreferrer">Disqus</a>.
+      Über <a href="https://coinhive.com/" target="_blank" rel="noopener noreferrer">Coinhive</a> werden die Moneros generiert.
     </p>
     <p>
       Das Projekt basiert auf einer Idee von <a href="https://bod.ge" rel="noopener noreferrer" target="_blank">Mike Bodge</a>,
       ist aber vollständig eigenständig und ist unabhängig entwickelt worden.
     </p>
-    <p><strong>{{site.name}}</strong> wurde von <a href="#" rel="noopener noreferrer">Daniel Kurtius</a> außschließlich zum Wohle der Allgemeinheit erstellt und wird auch zu keinem anderen Zweck betrieben.
+    <p><strong>{{site.name}}</strong> wurde von mir außschließlich zum Wohle der Allgemeinheit erstellt und wird auch zu keinem anderen Zweck betrieben.
     </p>
     <p>
       Vielen Dank für Deine Aufmerksamkeit.
     </p>
 
-
+      <footer>
+        &copy; 2017 Daniel Kurtius für <strong>{{site.name}}</strong>. Alle Rechte vorbehalten. <a href="/imprint">Impressum</a>
+      </footer>
     </main>
+
 
     <script type="application/javascript" src="https://coinhive.com/lib/coinhive.min.js"></script>
     <script type="application/javascript" src="/js/app.js?v={{version}}"></script>

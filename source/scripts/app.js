@@ -16,7 +16,6 @@ ready(function(){
       hashesOut   = document.getElementById('js-hashesOut'),
       euroOut     = document.getElementById('js-euroOut'),
       tgl         = document.getElementById('js-tgl-mining');
-      start       = document.getElementById('js-start-mining');
 
   // miner setup
   miner = new CoinHive.User('', User, {
@@ -30,7 +29,7 @@ ready(function(){
 
 
   // service setup
-  // tgl.checked = true;
+  tgl.checked = true;
   toggleMining();
   updateUI();
 
@@ -38,9 +37,7 @@ ready(function(){
   tgl.addEventListener("click", function(){
     toggleMining();
   });
-  start.addEventListener("click", function(){
-    startMining();
-  });
+  
 
   // Update loop
   setInterval(function() {
@@ -76,7 +73,6 @@ ready(function(){
       tgl.checked = false;
       miner.stop();
       donation.className = 'hide';
-      start.className = 'btn';
       document.body.className = '';
     }
   }
@@ -84,7 +80,6 @@ ready(function(){
     tgl.checked = true;
     miner.start();
     donation.className = 'show';
-    start.className = 'btn active';
     document.body.className = 'active';
   }
 
