@@ -13,7 +13,7 @@ var src               = './source',
     build             = '../spende-einen-tab.github.io', // build repo outside of this project…
     buildAssets       = build +  '/img',
     domain            = 'http://spende-einen-tab.de/'
-    version           = "0.3.0";
+    version           = "0.9.0";
 
 // all gulp task configurations & settings will be found here
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
         locale: "de_DE",
         analyticsID: "UA-108923431-1",
         "meta-canonical": domain,
-        "meta-description": "The description meta tag provides a short description of the page. In some situations this description is used as a part of the snippet shown in the search results."
+        "meta-description": "Auf Spende-Einen-Tab.de kannst Du die Zeit, in der diese Seite offen ist, in eine Spende verwandeln."
       }
     },
     config: {

@@ -1,7 +1,7 @@
 {
   "name": "tab",
-  "version": "0.0.1",
-  "description": "Donate CPU time to donate money to charities via client based Minero mining",
+  "version": "0.9.0",
+  "description": "Donate CPU to donate money to charities via client based Minero mining",
   "main": "index.js",
   "author": "Daniel Kurtius",
   "license": "MIT",
@@ -12,16 +12,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanseventures/casual-website.git"
+    "url": "git+https://github.com/Spende-Einen-Tab/tab-miner"
   },
   "keywords": [
     "node",
     "gulp"
   ],
   "bugs": {
-    "url": "https://github.com/hanseventures/casual-website/issues"
+    "url": "https://github.com/Spende-Einen-Tab/tab-miner/issues"
   },
-  "homepage": "https://github.com/hanseventures/casual-website#readme",
+  "homepage": "https://github.com/Spende-Einen-Tab/tab-miner#readme",
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "connect-gzip-static": "^1.0.0",
