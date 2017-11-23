@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     runSequence = require('run-sequence');
 
+gulp.task('default',['serve']);
 
 gulp.task('build', function(callback) {
   runSequence(

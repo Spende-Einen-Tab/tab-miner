@@ -23,6 +23,11 @@ $spacer: 2vw;
 @import "toggle-button";
 @import "cause";
 
+::selection {
+  color: white;
+  background-color: $color-blue;
+}
+
 body {
   display: flex;
   justify-content: flex-start;
