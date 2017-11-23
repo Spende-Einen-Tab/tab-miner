@@ -99,7 +99,7 @@ module.exports = {
   images: {                                       // just moving & watching
     src: {
       root: src + "/assets/**",
-      imgs: src + "/assets/imgs/**",
+      imgs: src + "/assets/images/**",
       icons: src + "/assets/icons/**"
     },
     dest: {
@@ -141,5 +141,9 @@ module.exports = {
     options: {
       preserveComments: 'license'
     }
+  },
+  minifySVG: {                                    // https://www.npmjs.com/package/gulp-svgo
+    src: build + "/img/**",
+    dest: build + "/img",
   },
 };

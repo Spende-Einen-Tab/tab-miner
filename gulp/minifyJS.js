@@ -16,7 +16,7 @@ gulp.task('minifyJS', function (callback) {
       size({title:'JS   '}),
       uglify(),
       gulp.dest(config.dest),
-      size({title:'JS 🔥 '})
+      size({title:'JS ⚡️ '})
     ],
     callback
   );

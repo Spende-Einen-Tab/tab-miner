@@ -9,8 +9,8 @@ var gulp   = require('gulp'),
 
 gulp.task('minifyHTML', function() {
   return gulp.src(config.src)
-    .pipe(size({title:'HTML  '}))
+    .pipe(size({title:'HTML   '}))
     .pipe(htmlmin(config.options))
     .pipe(gulp.dest(config.dest))
-    .pipe(size({title:'HTML🔥 '}));
+    .pipe(size({title:'HTML ⚡️ '}));
 });

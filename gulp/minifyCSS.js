@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 gulp.task('minifyCSS', function() {
   return gulp.src(config.src)
-    .pipe(size({title:'CSS  '}))
+    .pipe(size({title:'CSS   '}))
     .pipe(cleanCSS({
       debug: config.options.debug,
       processImport: config.options.processImport,
@@ -16,5 +16,5 @@ gulp.task('minifyCSS', function() {
       keepSpecialComments: config.options.keepSpecialComments
     }))
     .pipe(gulp.dest(config.dest))
-    .pipe(size({title:'CSS🔥 '}));
+    .pipe(size({title:'CSS ⚡️ '}));
 });

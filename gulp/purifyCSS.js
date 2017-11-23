@@ -8,8 +8,8 @@ var gulp = require('gulp'),
 
 gulp.task('purifyCSS', function() {
   return gulp.src(config.src)
-    .pipe(size({title:'CSS  '}))
+    .pipe(size({title:'CSS   '}))
     .pipe(purify([config.js,config.html],config.options))
     .pipe(gulp.dest(config.dest))
-    .pipe(size({title:'CSS🔥 '}));
+    .pipe(size({title:'CSS 🌀 '}));
 });
