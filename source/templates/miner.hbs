@@ -8,12 +8,12 @@
   </head>
   <body>
     <header>
-        <div>
-          <input id="js-tgl-mining" class="tgl" type="checkbox">
-          <label for="js-tgl-mining" class="btn-tgl" data-tgl-on="On" data-tgl-off="Off"></label>
-        </div>
+      <div>
+        <input id="js-tgl-mining" class="tgl" type="checkbox">
+        <label for="js-tgl-mining" class="btn-tgl" data-tgl-on="On" data-tgl-off="Off"></label>
+      </div>
 
-          {{> cause }}
+      {{> cause }}
 
     </header>
     <main>
@@ -22,8 +22,14 @@
       <p>Auf <strong>Spende-Einen-Tab.de</strong> kannst Du die Zeit, in der diese Seite offen ist, in eine Spende verwandeln.</p>
 
       <h1>Spende einen Tab deines Browsers für einen guten Zweck!</h1>
-      <p>Wenn Du diesen Tab offen und den Schalter links oben auf <strong>&quot;ON&quot;</strong> läßt, spendest du echtes Geld.
-        Je länger der Browser-Tab offen bleibt, um so mehr Geld kann es werden.
+      <p>Wenn Du diesen Tab offen und den Schalter links oben auf <strong>&quot;ON&quot;</strong> lässt,
+        spendest Du echtes Geld. Je länger der Browser-Tab offen bleibt, um so mehr Geld kann es werden.
+      </p>
+      <p>
+        Vielleicht warnt Dich Deine Anti-Viren-Software vor dieser Seite.
+        Du brauchst Dir aber keine Sorgen zu machen, es werden weder schädliche Daten
+        auf Deinem Gerät gespeichert, noch werden irgendwelche sensiblen persönlichen
+        Informationen verschickt.
       </p>
 
       <h3>Wofür kannst Du auf dieser Seite spenden?</h3>
@@ -46,26 +52,21 @@
         Die erste Möglichkeit ist es <a href="#disqus">sich an der Diskussion zu beteiligen</a> um das Projekt besser zu machen.
       </p>
       <p>
-        Die Zweite: zeige allen Deinen Freunden und Kollegen diese Seite damit so viele wie möglich
-        einen Browser-Tab spenden. Vielleicht kennst Du auch Menschen für die dieses Projekt frischer oder
+        Die zweite: zeige allen Deinen Freunden und Kollegen diese Seite, damit so viele wie möglich
+        einen Browser-Tab spenden. Vielleicht kennst Du auch Menschen, für die dieses Projekt frischer oder
         relevanter Inhalt für deren Projekte darstellt (wie für Presse, NGOs, Agenturen, Blogs oder Andere).
-      </p>
-      <p>
         Wenn Du Ideen hast, schick bitte eine E-Mail an
         <a href="mailto:hey@spende-einen-tab.de">hey@spende-einen-tab.de</a>.
-        <br><strong>Je mehr Sichtbarkeit Du ermöglichen kannst um so mehr Spenden werden entstehen.</strong></p>
+        <strong>Je mehr Menschen diese Seite besuchen, umso mehr Spenden werden entstehen.</strong></p>
 
       <h3>Wie wird das Geld „hergestellt“?</h3>
       <p>
-        Diese Seite errechnet die digitale Währung <a href="https://de.wikipedia.org/wiki/Monero" target="_blank" rel="noopener noreferrer">Monero</a>,
-        eine sogenannte <a href="https://de.wikipedia.org/wiki/Kryptow%C3%A4hrung" target="_blank" rel="noopener noreferrer">Cryptocurrency</a> (wie z.B.: Bitcoin). Mit Hilfe eines Dienstleisters
-        werden Bruchteile eines Moneros erstellt. Die Berechnungen vieler Bruchteile („Hashes“) dieser Währung
-        lassen sich in Euro umtauschen. Das klingt kompliziert, ist es auch.
+        Sehr vereinfacht dargestellt, errechnet diese Seite Teile der digitalen Währung
+        <a href="https://de.wikipedia.org/wiki/Monero" target="_blank" rel="noopener noreferrer">Monero</a>,
+        eine <a href="https://de.wikipedia.org/wiki/Kryptow%C3%A4hrung" target="_blank" rel="noopener noreferrer">Cryptocurrency</a>
+        wie z.B.: Bitcoin. Mit Hilfe eines Dienstleisters werden diese in Moneros umgewandelt
+        und die lassen sich in Euro umtauschen. Das klingt kompliziert, ist es auch.
       </p>
-      <p>
-        Vielleicht warnt Dich Deine Anti-Viren-Software vor dieser Seite. Du brauchst Dir aber keine Sorgen machen, es werden weder schädliche Daten auf Deinem Gerät gespeichert, noch werden irgendwelche sensiblen persönlichen Informationen verschickt.
-      </p>
-
 
       <h3>Wieviel Geld steuerst Du bei?</h3>
       <p>
@@ -81,44 +82,47 @@
 
       <h3>Wie funktioniert das Spenden?</h3>
       <p>
-        Jedes Mal wenn einem einzelnen Thema Moneros im Wert von fünfzig Euro zugeschrieben werden können werden diese der jeweiligen Hilfsorganisation zukommen und hier so transparent wir möglich dokumentiert.
+        Jedes Mal, wenn einem einzelnen Thema Moneros im Wert von fünfzig Euro zugeschrieben werden können, werden diese der jeweiligen Hilfsorganisation zukommen und hier dokumentiert.
       </p>
 
       {{{contents}}}
 
-    <div id="disqus">
-      <h3>Dieses Projekt ist auf Deine Mithilfe angewiesen.</h3>
-      <p>
-        Jede Form von Hinweis, Vorschlag oder Angebot kann nur helfen und ist ausdrücklich willkommen.
-      </p>
+      <div id="disqus">
+        <h3>Dieses Projekt ist auf Deine Mithilfe angewiesen</h3>
+        <p>
+          Jede Form von Hinweis, Vorschlag oder Angebot hilf und ist ausdrücklich willkommen.
+        </p>
 
-      <div id="disqus_thread"></div>
-      <script type="application/javascript">
-      (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://spende.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="noopener noreferrer">comments powered by Disqus.</a></noscript>
-    </div>
+        <div id="disqus_thread"></div>
+        <script type="application/javascript">
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://spende.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="noopener noreferrer">comments powered by Disqus.</a></noscript>
+      </div>
 
       <hr>
 
       <h3>Nachsatz</h3>
       <p>
-        Der Betrieb von <strong>{{site.name}}</strong> steht in keinerlei geschäftlicher Verbindung zu den Spendenorganisationen oder anderen Unternehmen.
-        Der Source-Code liegt schlecht dokumentiert aber frei zugänglich auf <a href="https://github.com/Spende-Einen-Tab/spende-einen-tab.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>.
-        Zur Auswertung aller Besucher und deren Verhalten nutzt diese Seite Software von <a href="https://www.google.com/intl/de/analytics/" target="_blank" rel="noopener noreferrer">Google Analytics</a>
+        Der Betrieb von <strong>{{site.name}}</strong> steht in keinerlei geschäftlicher Verbindung zu
+        den Spendenorganisationen oder anderen Unternehmen.
+        Der Source-Code liegt frei zugänglich auf
+        <a href="https://github.com/Spende-Einen-Tab/spende-einen-tab.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        Zur Webanalyse nutzt diese Seite Software von
+        <a href="https://www.google.com/intl/de/analytics/" target="_blank" rel="noopener noreferrer">Google Analytics</a>
         und für moderierte Kommentare <a href="https://disqus.com/" target="_blank" rel="noopener noreferrer">Disqus</a>.
         Über <a href="https://coinhive.com/" target="_blank" rel="noopener noreferrer">Coinhive</a> werden die Moneros generiert.
       </p>
       <p>
-        Das Projekt basiert auf einer Idee von <a href="https://bod.ge" rel="noopener noreferrer" target="_blank">Mike Bodge</a>,
-        ist aber vollständig eigenständig und ist unabhängig entwickelt worden.
+        Das Projekt basiert auf einer Idee von <a href="https://bod.ge" rel="noopener noreferrer" target="_blank">Mike Bodge</a>.
+        Es ist aber vollständig eigenständig und zudem unabhängig entwickelt worden.
       </p>
-      <p><strong>{{site.name}}</strong> wurde von mir außschließlich zum Wohle der Allgemeinheit erstellt und wird auch zu keinem anderen Zweck betrieben.
+      <p><strong>{{site.name}}</strong> wurde von mir ausschließlich zum Wohle der Allgemeinheit erstellt und wird auch zu keinem anderen Zweck betrieben.
       </p>
       <p>
         Vielen Dank für Deine Aufmerksamkeit.

@@ -37,10 +37,10 @@ body {
   font-size: 16px;
   line-height: 1.5em;
   background-color: $color-bg;
-  background-image: url('/img/background.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  // background-image: url('/img/background.svg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: top;
   // background-attachment: fixed;
   color: $color-type;
   &.active {
