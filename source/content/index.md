@@ -1,8 +1,8 @@
 ---
 # metadata
-meta-title: Spende einen Tab für die Informationsfreiheit!
+meta-title: Spende einen Tab für die Informationsfreiheit oder einen anderen guten Zweck!
 # meta-title should be around 50 chars. -> https://moz.com/learn/seo/title-tag
-meta-description: .
+meta-description: Auf Spende-Einen-Tab.de kannst Du die Zeit, in der  diese Seite offen ist, in eine Spende verwandeln.
 # meta-description should be around 150 chars. -> https://moz.com/learn/seo/meta-description
 collection: pages
 headline: Spende einen Tab für
