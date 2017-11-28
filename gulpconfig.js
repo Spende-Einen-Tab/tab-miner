@@ -44,6 +44,7 @@ module.exports = {
         lang: "de",
         locale: "de_DE",
         analyticsID: "UA-108923431-1",
+        googleVerification: "lH8EtiixhdD3XFoHzlxAp9mfqkatT3_uDEB4V2TtvI4",
         "meta-canonical": domain,
         "meta-description": "Auf Spende-Einen-Tab.de kannst Du die Zeit, in der diese Seite offen ist, in eine Spende verwandeln."
       }
