@@ -5,7 +5,7 @@ A static site build with #gulp and #metalsmith
 * [x] write good copy
 * [x] [Front-End-Checklist](https://github.com/thedaviddias/Front-End-Checklist)
 * [x] HTTPS via cloudflare
-* [ ] add Adblocker info text!
+* [x] add Adblocker info text!
 * [ ] write mediocre documentation
-* [ ] Mailchimp signup
+* [x] Mailchimp signup
 * [ ] Segment setup?
