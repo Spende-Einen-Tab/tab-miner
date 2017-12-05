@@ -13,6 +13,13 @@ $color-bg: white;
 $color-type:        #464646;
 $color-type-medium: #767676;
 $color-type-lite:   #D6D6D6;
+$color-type-hero:   darken($color-type,30%);
+
+
+$color-type-medium: #656C79;
+$color-type:        darken($color-type-medium,15%);
+$color-type-hero:   darken($color-type-medium,30%);
+$color-type-lite:   lighten($color-type-medium,20%);
 
 $font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -170,6 +177,7 @@ button,
 
 input{
   outline: none;
+  margin-bottom: .3em;
   &[type="email"]  {
     border: none;
     border-bottom: 2px solid $color-bg-lite;
