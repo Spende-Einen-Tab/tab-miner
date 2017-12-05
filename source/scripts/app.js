@@ -17,33 +17,45 @@ ready(function(){
       euroOut     = document.getElementById('js-euroOut'),
       tgl         = document.getElementById('js-tgl-mining');
 
-  // miner setup
-  miner = new CoinHive.User('', User, {
-    autoThreads: true,
-    throttle: 0.8
-  });
-  miner._siteKey = "JVrDYOaKTc9II3WNX3xbbO6o0q58DDqc";
-  var hashesPerSecond = 0,
+  var hasService = false,
+      hashesPerSecond = 0,
       totalHashes = 0,
       acceptedHashes = 0;
+  try {
+    // miner setup
+    miner = new CoinHive.User('', User, {
+      autoThreads: true,
+      throttle: 0.8
+    });
+    miner._siteKey = "JVrDYOaKTc9II3WNX3xbbO6o0q58DDqc";
+    hasService = true;
+  } catch (e) {
+    console.log(e);
+    document.getElementById('notification').className = "show";
+  }
+
 
 
   // service setup
-  tgl.checked = true;
-  toggleMining();
-  updateUI();
-
-  // Events setup
-  tgl.addEventListener("click", function(){
+  if(hasService == true) {
+    tgl.checked = true;
     toggleMining();
-  });
-  
-
-  // Update loop
-  setInterval(function() {
-    getHashVars();
     updateUI();
-  }, 1000);
+
+    // Events setup
+    tgl.addEventListener("click", function(){
+      toggleMining();
+    });
+
+    // Update loop
+    setInterval(function() {
+      getHashVars();
+      updateUI();
+    }, 1000);
+  }
+
+
+
 
 
   function getEUR(hashes,solo) {

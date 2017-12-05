@@ -1,0 +1,19 @@
+#notification {
+  display: none;
+  position: fixed;
+  top: $spacer;
+  left: $spacer;
+  right: $spacer;
+  // width: 100%;
+  z-index: 10;
+  color: darken($color-radish,10%);
+  border: 10px solid $color-radish;
+  box-sizing: border-box;
+  background: white;
+  div {
+    padding: $spacer;
+  }
+  &.show {
+    display: block;
+  }
+}
