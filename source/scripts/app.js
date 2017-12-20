@@ -61,7 +61,7 @@ ready(function(){
   function getEUR(hashes,solo) {
     var initalEUR = (solo) ? 0 : EUR,
         hashesMonero = 0.00014796/1000000,
-        moneroEUR = 74,
+        moneroEUR = 369,
         donationEUR = (hashesMonero*hashes)*moneroEUR,
         outputEUR = Math.round((initalEUR+donationEUR)*1000000)/1000000;
     return outputEUR.toString().replace(".", ",");
