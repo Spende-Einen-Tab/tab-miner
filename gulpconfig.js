@@ -13,7 +13,7 @@ var src               = './source',
     build             = '../spende-einen-tab.github.io', // build repo outside of this project…
     buildAssets       = build +  '/img',
     domain            = 'http://spende-einen-tab.de/'
-    version           = "0.9.0";
+    version           = "1.0.1";
 
 // all gulp task configurations & settings will be found here
 module.exports = {

@@ -1,6 +1,6 @@
 {
-  "name": "tab",
-  "version": "0.9.0",
+  "name": "tab miner",
+  "version": "1.0.1",
   "description": "Donate CPU to donate money to charities via client based Minero mining",
   "main": "index.js",
   "author": "Daniel Kurtius",
