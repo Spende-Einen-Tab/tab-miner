@@ -8,4 +8,5 @@ A static site build with #gulp and #metalsmith
 * [x] add Adblocker info text!
 * [ ] write mediocre documentation
 * [x] Mailchimp signup
-* [ ] Segment setup?
+* [ ] Remember current donation in cookie
+* [ ] make personal effort more visible
